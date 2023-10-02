@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public AnimatedSpriteRenderer start;
-    public AnimatedSpriteRenderer middle;
-    public AnimatedSpriteRenderer end;
-
-    public void SetActiveRenderer(AnimatedSpriteRenderer renderer)
+    public GameObject start;
+    public GameObject middle;
+    public GameObject end;
+    
+    public void SetActiveRenderer(GameObject renderer)
     {
-        start.enabled = renderer == start;
-        middle.enabled = renderer == middle;
-        end.enabled = renderer == end;
+        start.SetActive(renderer == start);
+        middle.SetActive(renderer == middle);
+        end.SetActive(renderer == end);
     }
-
     public void SetDirection(Vector2 direction)
     {
         float angle = Mathf.Atan2(direction.y, direction.x);

@@ -1,12 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BoomController : MonoBehaviour
 {
-    private void OnTriggerExit2D(Collider2D other)
+    private static BoomController instance;
+    public static BoomController Instance
     {
-        Debug.Log("no");
+        get { return instance; }
     }
+
+    [Header("Explosion")]
+    public LayerMask explosionLayerMask;
+    public float explosionDuration = 1f;
+    public int explosionRadius = 1;
 }

@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093924228726053949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.376964, y: 0.7660852, z: 1.1806574}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcb9a2690a062e4abbece30701c833a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 2247905345481554084}
-  middle: {fileID: 2397144419771376137}
-  end: {fileID: 4609786052526245192}
+  start: {fileID: 8702329284143157985}
+  middle: {fileID: 3635982831118403896}
+  end: {fileID: 4409975100243853216}
 --- !u!1 &3635982831118403896
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,14 +106,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5292449936710761710}
   - component: {fileID: 5362667318490020507}
-  - component: {fileID: 2397144419771376137}
+  - component: {fileID: 501176456818958276}
   m_Layer: 0
   m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5292449936710761710
 Transform:
   m_ObjectHideFlags: 0
@@ -181,31 +181,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2397144419771376137
-MonoBehaviour:
+--- !u!95 &501176456818958276
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3635982831118403896}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302c43e23efa09a47a499cbbc59200fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleSprite: {fileID: -1388949089, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  animationSprites:
-  - {fileID: -1388949089, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: 211694585, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: -234769246, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: 1397748237, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: -1638159866, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: -1091642673, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: -1841399093, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  - {fileID: 851648691, guid: 10518c73fea29d94e8b95b6fac91d7cb, type: 3}
-  animationTime: 0.125
-  loop: 1
-  idle: 0
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1292af95fdd81b246a0c2e44b760f87f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4409975100243853216
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,14 +212,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2938266732801828236}
   - component: {fileID: 6306703090388871325}
-  - component: {fileID: 4609786052526245192}
+  - component: {fileID: 6381168046409568804}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2938266732801828236
 Transform:
   m_ObjectHideFlags: 0
@@ -291,31 +287,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4609786052526245192
-MonoBehaviour:
+--- !u!95 &6381168046409568804
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4409975100243853216}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302c43e23efa09a47a499cbbc59200fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleSprite: {fileID: 310372811, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  animationSprites:
-  - {fileID: 310372811, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: -366416721, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: -2114822714, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: -217676415, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: 196688139, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: -1375836341, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: 466280946, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  - {fileID: 2009239641, guid: 2231ed34f4c267642938561a63bdfb08, type: 3}
-  animationTime: 0.125
-  loop: 1
-  idle: 0
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2430bcf18994fc34a87654a304fead3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8702329284143157985
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,14 +318,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6544915375713251977}
   - component: {fileID: 5508679635206558193}
-  - component: {fileID: 2247905345481554084}
+  - component: {fileID: 1783892603182570558}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6544915375713251977
 Transform:
   m_ObjectHideFlags: 0
@@ -401,28 +393,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2247905345481554084
-MonoBehaviour:
+--- !u!95 &1783892603182570558
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8702329284143157985}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302c43e23efa09a47a499cbbc59200fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleSprite: {fileID: 139619490, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  animationSprites:
-  - {fileID: 139619490, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: 1496910330, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: 2072385901, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: 2046663978, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: 106594370, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: 1875492796, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: -1820281181, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  - {fileID: 1407270912, guid: 3af3812a6c1a5b24ba16f2c6e5b8eca2, type: 3}
-  animationTime: 0.125
-  loop: 1
-  idle: 0
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71d8e33b10c60f64f92cfc2bf28306f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
