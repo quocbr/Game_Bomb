@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 5292449936710761710}
   - component: {fileID: 5362667318490020507}
   - component: {fileID: 501176456818958276}
+  - component: {fileID: 7081679848044990540}
   m_Layer: 0
   m_Name: Middle
   m_TagString: Untagged
@@ -202,6 +203,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7081679848044990540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3635982831118403896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc08e7c4c46a8d842a507814e4ed3c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4409975100243853216
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +226,7 @@ GameObject:
   - component: {fileID: 2938266732801828236}
   - component: {fileID: 6306703090388871325}
   - component: {fileID: 6381168046409568804}
+  - component: {fileID: 5366705960537446935}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
@@ -308,6 +322,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5366705960537446935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4409975100243853216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc08e7c4c46a8d842a507814e4ed3c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8702329284143157985
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +345,7 @@ GameObject:
   - component: {fileID: 6544915375713251977}
   - component: {fileID: 5508679635206558193}
   - component: {fileID: 1783892603182570558}
+  - component: {fileID: 7173602389324728927}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -414,3 +441,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7173602389324728927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702329284143157985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc08e7c4c46a8d842a507814e4ed3c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

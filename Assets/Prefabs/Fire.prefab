@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4201000552780542715}
   - component: {fileID: 6668166392083583485}
-  - component: {fileID: 5153331625180819808}
+  - component: {fileID: 6727590776496503180}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -27,11 +27,11 @@ Transform:
   m_GameObject: {fileID: 3998779258298295667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6668166392083583485
 SpriteRenderer:
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1401090419, guid: 7ea8f0276b4328f4a8729183de280d43, type: 3}
+  m_Sprite: {fileID: 313185949, guid: 7ea8f0276b4328f4a8729183de280d43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5153331625180819808
+--- !u!114 &6727590776496503180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3998779258298295667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adf0138d127b00449faa9602060c769, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d1b6986247aea0468d8dd1b2bd83f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
-  timer: 0
+  destructionTime: 1
+  itemSpawnChance: 0.2
+  spawnableItems:
+  - {fileID: 229265539482838722, guid: d0c59e214cd4bb340bcec5fe84a4eeb9, type: 3}
+  - {fileID: 4972620994308253636, guid: 03c564c9dcd87664d992300d0f6dc3e7, type: 3}
+  - {fileID: 9014947956368111388, guid: e298fcf591c70ad419cb0875e4eb9184, type: 3}

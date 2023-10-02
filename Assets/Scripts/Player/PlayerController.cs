@@ -12,27 +12,11 @@ public class PlayerController : QuocBehaviour
     public PlayerAnimationStrings animationStrings = new PlayerAnimationStrings();
 
     [SerializeField]private Vector2 moveInput = Vector2.zero;
-    [SerializeField]private float moveSpeed = 2.0f;
-    [SerializeField] private Vector2 direction;
+    public float moveSpeed = 2.0f;
     private Animator _animator;
     private Rigidbody2D _rb;
-    private PlayerInputAction _playerInputAction;
-
-    public float bombFuseTime = 4.5f;
-    public int bombAmount = 1;
-
-    private bool _animLoker = false;
     
-    [Header("Explosion")]
-    public Explosion explosionPrefab;
-    public LayerMask explosionLayerMask;
-    public float explosionDuration = 1f;
-    public int explosionRadius = 1;
-
-    protected override void Awake()
-    {
-        _playerInputAction = new PlayerInputAction();
-    }
+    private bool _animLoker = false;
 
     protected override void Start()
     {
@@ -54,29 +38,6 @@ public class PlayerController : QuocBehaviour
         }
 
         UpdateAnimation();
-
-        if (_playerInputAction.Player.Fire.triggered && BulletSpawner.Instance.SpawnedCount < bombAmount)
-        {
-            StartCoroutine(PlaceBomb());
-            /*var position = this.transform.position;
-            this.direction.x = (int) position.x + (position.x>0.0?0.5f:-0.5f);
-            this.direction.y = (int) (position.y + (position.y>0.0?0.5f:-0.5f));
-
-            Transform newBullet = BulletSpawner.Instance.Spawn(BulletSpawner.bulletOne,this.direction, transform.rotation);
-            newBullet.gameObject.SetActive(true);*/
-        }
-    }
-
-    private IEnumerator PlaceBomb()
-    {
-        Vector2 position = this.transform.position;
-        position.x = (int) position.x + (position.x>0.0?0.5f:-0.5f);
-        position.y = (int) (position.y + (position.y>0.0?0.5f:-0.5f));
-        
-        Transform newBullet = BulletSpawner.Instance.Spawn(BulletSpawner.bulletOne,position, Quaternion.identity);
-        newBullet.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(bombFuseTime);
     }
 
     private void UpdateAnimation()
@@ -95,17 +56,7 @@ public class PlayerController : QuocBehaviour
     {
         this.moveInput = value.Get<Vector2>();
     }
-
-    protected override void OnEnable()
-    {
-        _playerInputAction.Enable();
-    }
-
-    protected override void OnDisable()
-    {
-        _playerInputAction.Disable();
-    }
-
+    
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))

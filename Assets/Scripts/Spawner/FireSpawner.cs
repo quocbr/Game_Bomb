@@ -16,25 +16,25 @@ public class FireSpawner : Spawner
         FireSpawner.instance = this;
     }
 
-    public virtual List<Transform> Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
-    {
-        Transform prefab = this.GetPrefabByName(prefabName);
-        if (prefab == null)
-        {
-            Debug.LogWarning("Prefab not found: " + prefabName);
-            return null;
-        }
-
-        List<Vector3> newPos = new List<Vector3>();
-
-            newPos.Add(spawnPos+Vector3.left);
-            newPos.Add(spawnPos+Vector3.right);
-            newPos.Add(spawnPos+Vector3.down);
-            newPos.Add(spawnPos+Vector3.up);
-
-
-        return this.Spawn(prefab, newPos, rotation);
-    }
+    // public virtual List<Transform> Spawn(string prefabName, Vector3 spawnPos, Quaternion rotation)
+    // {
+    //     Transform prefab = this.GetPrefabByName(prefabName);
+    //     if (prefab == null)
+    //     {
+    //         Debug.LogWarning("Prefab not found: " + prefabName);
+    //         return null;
+    //     }
+    //
+    //     List<Vector3> newPos = new List<Vector3>();
+    //
+    //         newPos.Add(spawnPos+Vector3.left);
+    //         newPos.Add(spawnPos+Vector3.right);
+    //         newPos.Add(spawnPos+Vector3.down);
+    //         newPos.Add(spawnPos+Vector3.up);
+    //
+    //
+    //     return this.Spawn(prefab, newPos, rotation);
+    // }
     
     public virtual List<Transform> Spawn(Transform prefab, List<Vector3> spawnPos, Quaternion rotation)
     {
