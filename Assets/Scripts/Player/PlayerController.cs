@@ -57,11 +57,28 @@ public class PlayerController : QuocBehaviour
         this.moveInput = value.Get<Vector2>();
     }
     
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Bomb"))
-        {
-            other.isTrigger = false;
+        if (other.gameObject.layer == LayerMask.NameToLayer("Explosion")) {
+            DeathSequence();
         }
     }
+
+    private void DeathSequence()
+    {
+        enabled = false;
+        GetComponent<BoomController>().enabled = false;
+
+        _animator.Play(animationStrings.death);
+
+        Invoke(nameof(OnDeathSequenceEnded), 1.25f);
+    }
+
+    private void OnDeathSequenceEnded()
+    {
+        gameObject.SetActive(false);
+        FindObjectOfType<GameManager>().CheckWinState();
+    }
+    
+    
 }
