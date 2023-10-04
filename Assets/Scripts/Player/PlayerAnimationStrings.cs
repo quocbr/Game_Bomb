@@ -7,5 +7,6 @@
         public string death => "death";
         public string moveX => "moveX";
         public string moveY => "moveY";
+        public string isRun => "isRun";
     }
 }

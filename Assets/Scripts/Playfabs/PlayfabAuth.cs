@@ -1,7 +1,9 @@
 
+using Photon.Pun;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayfabAuth : MonoBehaviour
@@ -34,6 +36,7 @@ public class PlayfabAuth : MonoBehaviour
             isAuthentiacted = true;
             message.text = "Wellcome " + user.text + " Connecting ...";
             Debug.Log("You are now logged in");
+            SceneManager.LoadScene("Level_1");
         }, error =>
         {
             message.text = "Loi login [" + error.ErrorMessage + "]";

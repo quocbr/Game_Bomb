@@ -16,7 +16,10 @@ GameObject:
   - component: {fileID: 8754511869745284029}
   - component: {fileID: 3321317126567862280}
   - component: {fileID: 8130204129340866525}
-  - component: {fileID: 9190469670427473769}
+  - component: {fileID: 9135692513117085304}
+  - component: {fileID: 559433292233483342}
+  - component: {fileID: 1769900206432129023}
+  - component: {fileID: 3324797872430725481}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -138,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15222b514b0fe1b4583098d031cafd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 3427946175068972651, guid: 7301d289080f77c41be019430cc56080, type: 3}
+  bombPrefab: {fileID: 2529550536163739354, guid: 7301d289080f77c41be019430cc56080, type: 3}
   bombFuseTime: 3
   bombAmount: 1
   explosionPrefab: {fileID: -6258943790286413154, guid: ebbb78485bde8094693595e90feba301, type: 3}
@@ -238,10 +241,10 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.4}
+  m_Offset: {x: 0, y: 0.5}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &9190469670427473769
+  m_Radius: 0.45
+--- !u!114 &9135692513117085304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,8 +261,70 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 559433292233483342}
+  - {fileID: 1769900206432129023}
+  - {fileID: 3324797872430725481}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &559433292233483342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315806422848014287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &1769900206432129023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315806422848014287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7cb724808c322458aa4d15f5035fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &3324797872430725481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315806422848014287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 1
+    Name: moveX
+  - Type: 1
+    SynchronizeType: 1
+    Name: moveY
+  - Type: 4
+    SynchronizeType: 1
+    Name: isRun
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0

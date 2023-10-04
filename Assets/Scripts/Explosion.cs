@@ -7,12 +7,12 @@ public class Explosion : MonoBehaviour
     public GameObject start;
     public GameObject middle;
     public GameObject end;
-    
-    public void SetActiveRenderer(GameObject renderer)
+
+    public void SetActiveRenderer(string renderer)
     {
-        start.SetActive(renderer == start);
-        middle.SetActive(renderer == middle);
-        end.SetActive(renderer == end);
+        start.SetActive(renderer == start.name);
+        middle.SetActive(renderer == middle.name);
+        end.SetActive(renderer == end.name);
     }
     public void SetDirection(Vector2 direction)
     {

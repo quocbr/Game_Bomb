@@ -34,6 +34,7 @@ public class GameManager : QuocBehaviour
 
     private void NewRound()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("Level_1");
     }
 }

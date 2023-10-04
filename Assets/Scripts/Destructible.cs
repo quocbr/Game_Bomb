@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class Destructible : MonoBehaviour
+public class Destructible : MonoBehaviourPunCallbacks
 {
     public float destructionTime = 1f;
 
@@ -20,7 +21,7 @@ public class Destructible : MonoBehaviour
         if (spawnableItems.Length > 0 && Random.value < itemSpawnChance)
         {
             int randomIndex = Random.Range(0, spawnableItems.Length);
-            Instantiate(spawnableItems[randomIndex], transform.position, Quaternion.identity);
+            PhotonNetwork.Instantiate(spawnableItems[randomIndex].name, transform.position, Quaternion.identity);
         }
     }
 }
