@@ -10,6 +10,8 @@ public class ConnecToSeverController : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        PhotonNetwork.SerializationRate = 5; //10
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = MasterManager.GameSetting.NickName;
         PhotonNetwork.GameVersion = MasterManager.GameSetting.GameVersiron;
         PhotonNetwork.ConnectUsingSettings();
