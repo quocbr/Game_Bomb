@@ -41,6 +41,8 @@ MonoBehaviour:
   - RespawnSpaceship
   - ReceiveTilemapData
   - UpdateAnimation
+  - SyncTilemapChange
+  - RPC_ChangeReadyState
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

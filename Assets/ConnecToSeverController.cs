@@ -10,6 +10,7 @@ public class ConnecToSeverController : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = MasterManager.GameSetting.NickName;
         PhotonNetwork.GameVersion = MasterManager.GameSetting.GameVersiron;
         PhotonNetwork.ConnectUsingSettings();
@@ -18,7 +19,10 @@ public class ConnecToSeverController : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connented to master");
-        PhotonNetwork.JoinLobby();
+        if (PhotonNetwork.InLobby)
+        {
+            PhotonNetwork.JoinLobby();
+        }
     }
 
     public override void OnDisconnected(DisconnectCause cause)

@@ -108,11 +108,9 @@ public class BoomController : MonoBehaviourPunCallbacks
 
         //Explosion explosion = PhotonNetwork.Instantiate(explosionPrefab, position, Quaternion.identity);
         GameObject explosionGameObject = PhotonNetwork.Instantiate(explosionPrefab.name, position, Quaternion.identity);
-        Transform x = explosionGameObject.GetComponent<Transform>();
-        
-        this.SetActiveRenderer(x,length > 1 ? "Middle" : "End");
+
+        this.SetActiveRenderer(explosionGameObject.GetComponent<Transform>(),length > 1 ? "Middle" : "End");
         this.SetDirection(explosionGameObject,direction);
-        //explosion.DestroyAfter(explosionDuration);
         Destroy(explosionGameObject,explosionDuration);
 
 
@@ -143,8 +141,28 @@ public class BoomController : MonoBehaviourPunCallbacks
         {
             //Instantiate(destructiblePrefab, position, Quaternion.identity);
             PhotonNetwork.Instantiate(destructiblePrefab.name, position, Quaternion.identity);
-            destructibleTiles.SetTile(cell, null);
+            //destructibleTiles.SetTile(cell, null);
+            OnTilemapChanged(cell);
         }
+    }
+    
+    // Sự kiện được gọi khi có thay đổi trên tilemap
+    private void OnTilemapChanged(Vector3Int position)
+    {
+        if (photonView.IsMine)
+        {
+            // Gửi thông tin thay đổi thông qua Photon để đồng bộ hóa với người chơi khác
+            photonView.RPC("SyncTilemapChange", RpcTarget.All, position);
+        }
+    }
+    
+    [PunRPC]
+    private void SyncTilemapChange(Vector3Int position)
+    {
+        // Áp dụng thông tin thay đổi từ người chơi khác lên tilemap
+        TileBase newTile = destructibleTiles.GetTile(position);
+        destructibleTiles.SetTile(position, null);
+        destructibleTiles.RefreshTile(position);
     }
 
     public void AddBomb()

@@ -1,14 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomListingMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField] private Transform _content;
     [SerializeField] private RoomListing _roomListening;
+
     private List<RoomListing> _listings = new List<RoomListing>();
+    private RoomsCanvas _roomsCanvas;
+
+    public void FirstInitialize(RoomsCanvas canvas)
+    {
+        _roomsCanvas = canvas;
+    }
+    public override void OnJoinedRoom()
+    {
+        _roomsCanvas.CurrenRoomCanvas.Show();
+        _content.DestroyChildren();
+        _listings.Clear();
+    }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
@@ -49,4 +64,5 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
             }
         }
     }
+
 }
