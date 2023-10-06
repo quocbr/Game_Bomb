@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class CurrenRoomCanvas : MonoBehaviour
 {
+    [SerializeField] private PlayerListingMenu _playerListingMenu;
+    [SerializeField] private LeaveRoomMenu _leaveRoomMenu;
     private RoomsCanvas _roomsCanvas;
     
     public void FirstInitialize(RoomsCanvas canvas)
     {
         _roomsCanvas = canvas;
+        _playerListingMenu.FirstInitialize(canvas);
+        _leaveRoomMenu.FirstInitialize(canvas);
     }
 
     public void Show()

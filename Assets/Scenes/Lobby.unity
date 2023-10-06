@@ -780,6 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _createRoom: {fileID: 1599470714}
+  _roomListingMenu: {fileID: 1927799668}
 --- !u!1 &799912023
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +794,7 @@ GameObject:
   - component: {fileID: 799912026}
   - component: {fileID: 799912025}
   m_Layer: 5
-  m_Name: LeaveRoom
+  m_Name: LeaveRoomMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1994,7 +1995,7 @@ GameObject:
   - component: {fileID: 1510215379}
   - component: {fileID: 1510215380}
   m_Layer: 5
-  m_Name: RoomListing
+  m_Name: PlayerListingMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2030,11 +2031,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1510215378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc41c17d71008e4fb8d1c92bbd7394a, type: 3}
+  m_Script: {fileID: 11500000, guid: 387d6d239bf70b64eb210145da567ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _content: {fileID: 1792500143}
-  _roomListening: {fileID: -2784596955301182330, guid: 02dcb53caf039a04183a6c22a9750d8a, type: 3}
+  _playerListing: {fileID: 2996686057358399014, guid: 057ff6806be03f14c9873889ca55d64c, type: 3}
 --- !u!1 &1553316239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2534,7 @@ GameObject:
   - component: {fileID: 1927799667}
   - component: {fileID: 1927799668}
   m_Layer: 5
-  m_Name: RoomListing
+  m_Name: RoomListingMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
